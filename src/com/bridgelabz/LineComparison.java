@@ -30,16 +30,16 @@ public class LineComparison {
 
         double secondLineLength = getLen(x3, y3, x4, y4);
         System.out.println("Length of the given Line is : " + secondLineLength + " units");
-        Boolean isEqual = isEquals(firstLineLength, secondLineLength);
-        System.out.println("Lengths are equal:" + isEqual);
+        compare(firstLineLength, secondLineLength);
     }
 
-    private static Boolean isEquals(double firstLineLength, double secondLineLength) {
-        if (firstLineLength == secondLineLength) {
-            return true;
-        } else {
-            return false;
-        }
+    private static void compare(double firstLineLength, double secondLineLength) {
+        if (firstLineLength > secondLineLength)
+            System.out.println("Line 1 is Greater Than Line 2");
+        else if (firstLineLength < secondLineLength)
+            System.out.println("Line 2 is Greater Than Line 1");
+        else
+            System.out.println("Two Lines are Equal");
     }
 
     private static double getLen(int x1, int y1, int x2, int y2) {
